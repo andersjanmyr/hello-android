@@ -12,6 +12,7 @@ flows:
     - (on master, name hello-android) ./gradlew compileDebugSources
   sdk:
     - echo "sdk.dir=$ANDROID_HOME" > local.properties
+    - echo y | android update sdk --no-ui --filter build-tools-24.0.2
   pr:
   - call: master
 
