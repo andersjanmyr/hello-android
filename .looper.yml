@@ -4,7 +4,6 @@ tools:
   gradle:
     - 2.14.1
   android:
-    - 24.4.1
     - build-tools-24.0.2
 
 flows:
