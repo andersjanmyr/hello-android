@@ -11,7 +11,7 @@ flows:
     - call: sdk
     - (on master, name hello-android) ./gradlew compileDebugSources
   sdk:
-    - echo "sdk.dir=$ANDROID_HOME" > local.properties
+    - echo "sdk.dir=$ANDROID_SDK_HOME" > local.properties
   pr:
   - call: master
 
