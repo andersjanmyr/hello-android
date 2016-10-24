@@ -23,11 +23,16 @@ tools:
 
 flows:
   master:
+    - call: verify
     - call: sdk
     - chmod a+x ./gradlew
     - (on master, name hello-android) ./gradlew compileDebugSources
   sdk:
     - echo "sdk.dir=$ANDROID_SDK_HOME" > local.properties
+
+  verify:
+    - ls -l /root/tools/android.hello-android-*/build-tools/23.0.3
+    - ls -l /root/tools/android.hello-android-*/build-tools/23.0.3/*
   pr:
   - call: master
 
