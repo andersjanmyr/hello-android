@@ -24,6 +24,7 @@ tools:
 flows:
   master:
     - call: sdk
+    - chmod a+x ./gradlew
     - (on master, name hello-android) ./gradlew compileDebugSources
   sdk:
     - echo "sdk.dir=$ANDROID_SDK_HOME" > local.properties
