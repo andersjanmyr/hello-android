@@ -32,7 +32,8 @@ flows:
 
   verify:
     - ls -l $HOME/tools/android.hello-android-*/build-tools/23.0.3
-    - ls -l $HOME/tools/android.hello-android-*/build-tools/23.0.3/*
+    - env
+
   pr:
   - call: master
 
