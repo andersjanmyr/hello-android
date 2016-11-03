@@ -31,7 +31,6 @@ flows:
     - echo "sdk.dir=$ANDROID_SDK_HOME" > local.properties
 
   verify:
-    - ls -l $HOME/tools/android.hello-android-*/build-tools/23.0.3
     - env
 
   pr:
