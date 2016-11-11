@@ -9,17 +9,8 @@ tools:
     - platform-tools
     - build-tools-23.0.3
     - build-tools-24.0.3
-    - android-15
-    - android-16
-    - android-17
-    - android-18
-    - android-19
-    - android-20
-    - android-21
-    - android-22
     - android-23
     - android-24
-    - extra-android-m2repository
 
 flows:
   master:
