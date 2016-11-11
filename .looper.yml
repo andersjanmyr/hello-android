@@ -18,7 +18,7 @@ flows:
     - call: verify
     - call: sdk
     - (name Fix permissions, silent) chmod a+x ./gradlew
-    - (name Build) ./gradlew compileDebugSources
+    - (name Build) ./build.sh
   sdk:
     - (name Setup SDK properties) echo "sdk.dir=$ANDROID_SDK_HOME" > local.properties
 
