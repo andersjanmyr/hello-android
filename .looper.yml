@@ -11,19 +11,21 @@ tools:
     - build-tools-24.0.3
     - android-23
     - android-24
+    - extra-android-m2repository
 
 flows:
   master:
     - call: verify
     - call: sdk
-    - chmod a+x ./gradlew
-    - (on master, name hello-android) ./gradlew compileDebugSources
+    - (name Fix permissions, silent) chmod a+x ./gradlew
+    - (name Build) ./build.sh
+
   sdk:
-    - echo "sdk.dir=$ANDROID_SDK_HOME" > local.properties
+    - (name Setup SDK properties) echo "sdk.dir=$ANDROID_SDK_HOME" > local.properties
 
   verify:
-    - env
+    - (name Show environment) env
 
   pr:
-  - call: master
-
+    - (name from pr, silent) echo 'Triggered from PR'
+    - call: master
