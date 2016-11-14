@@ -21,10 +21,10 @@ flows:
     - (name Build) ./build.sh
 
   sdk:
-    - (name Setup SDK properties) echo "sdk.dir=$ANDROID_SDK_HOME" > local.properties
+    - (name Setup SDK properties, silent) echo "sdk.dir=$ANDROID_SDK_HOME" > local.properties
 
   verify:
-    - (name Show environment) env
+    - (name Show environment, silent) env
 
   pr:
     - (name from pr, silent) echo 'Triggered from PR'
