@@ -19,6 +19,7 @@ flows:
     - call: sdk
     - (name Fix permissions, silent) chmod a+x ./gradlew
     - (name Build) ./build.sh
+
   sdk:
     - (name Setup SDK properties) echo "sdk.dir=$ANDROID_SDK_HOME" > local.properties
 
@@ -26,5 +27,5 @@ flows:
     - (name Show environment) env
 
   pr:
-  - call: master
-
+    - (name from pr, silent) echo 'Triggered from PR'
+    - call: master
