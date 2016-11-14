@@ -1,6 +1,8 @@
 #!/bin/bash
 
+env
 echo "Git branch" $GIT_BRANCH
+
 if [[ "$GIT_BRANCH" == "origin/release" ]]; then
   ./gradlew compileReleaseSources
 else
